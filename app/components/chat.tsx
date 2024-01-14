@@ -97,6 +97,7 @@ import { getClientConfig } from "../config/client";
 import { useAllModels } from "../utils/hooks";
 import Image from "next/image";
 import { ClientApi } from "../client/api";
+import { AutoML } from "./automl";
 
 const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
   loading: () => <LoadingIcon />,
@@ -1339,24 +1340,37 @@ function _Chat() {
                   </div>
                   {!isUser &&
                     message.toolMessages &&
-                    message.toolMessages.map((tool, index) => (
-                      <div
-                        className={styles["chat-message-tools-status"]}
-                        key={index}
-                      >
-                        <div className={styles["chat-message-tools-name"]}>
-                          <CheckmarkIcon
-                            className={styles["chat-message-checkmark"]}
-                          />
-                          {tool.toolName}:
-                          <code
-                            className={styles["chat-message-tools-details"]}
+                    message.toolMessages.map((tool, index) => {
+                      if (tool.toolName === "automl") {
+                        return (
+                          <div
+                            key={index}
+                            className={styles["chat-message-item"]}
                           >
-                            {tool.toolInput}
-                          </code>
-                        </div>
-                      </div>
-                    ))}
+                            <AutoML></AutoML>
+                          </div>
+                        );
+                      } else {
+                        return (
+                          <div
+                            className={styles["chat-message-tools-status"]}
+                            key={index}
+                          >
+                            <div className={styles["chat-message-tools-name"]}>
+                              <CheckmarkIcon
+                                className={styles["chat-message-checkmark"]}
+                              />
+                              {tool.toolName}:
+                              <code
+                                className={styles["chat-message-tools-details"]}
+                              >
+                                {tool.toolInput}
+                              </code>
+                            </div>
+                          </div>
+                        );
+                      }
+                    })}
 
                   {showTyping && (
                     <div className={styles["chat-message-status"]}>

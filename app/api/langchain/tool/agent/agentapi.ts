@@ -28,7 +28,11 @@ import {
 } from "langchain/agents/openai/output_parser";
 import { RunnableSequence } from "langchain/schema/runnable";
 import { ChatPromptTemplate, MessagesPlaceholder } from "langchain/prompts";
-
+import { AutoML } from "@/app/api/langchain-tools/automl";
+import { MLInfer } from "@/app/api/langchain-tools/ml_infer";
+import fs from "fs";
+import { Model } from "@/app/api/automl/add-model/route";
+import { z } from "zod";
 export interface RequestMessage {
   role: string;
   content: string;
@@ -76,6 +80,8 @@ export class AgentApi {
     this.transformStream = transformStream;
     this.writer = writer;
   }
+
+  parseModel(model: Model) {}
 
   async getHandler(reqBody: any) {
     var writer = this.writer;
@@ -264,7 +270,46 @@ export class AgentApi {
         });
       }
 
-      const tools = [];
+      const tools: any[] = [];
+
+      // Parse DynamicTools
+      const modelPath = "data/models.json";
+      if (fs.existsSync(modelPath)) {
+        const modelList: Model[] = JSON.parse(
+          fs.readFileSync(modelPath, "utf-8"),
+        );
+        modelList.forEach((model) => {
+          tools.push(
+            new DynamicStructuredTool({
+              name: model.name ?? "",
+              description: `用于预测 ${model.target}的模型。${model.description}`,
+              schema: z.object(
+                model.features.reduce((pre: any, curr: string) => {
+                  pre[curr] = z.number().describe(curr);
+                  return pre;
+                }, {}),
+              ),
+              func: async (input) => {
+                const response = await fetch(
+                  "http://start-pthon-huo-vlajldjxic.cn-hangzhou.fcapp.run/predict",
+                  {
+                    method: "POST",
+                    body: JSON.stringify({
+                      modelName: model.name,
+                      features: input,
+                    }),
+                  },
+                );
+                return response.text();
+              },
+            }),
+          );
+        });
+      }
+
+      const autoMlTool: langchainTools.Tool = new AutoML();
+      tools.push(autoMlTool);
+      //tools.push(new MLInfer())
 
       if (useTools.includes("web-search")) tools.push(searchTool);
       // console.log(customTools);
