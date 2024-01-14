@@ -45,21 +45,21 @@
     "@alicloud/tea-typescript" "^1.7.1"
 
 "@alicloud/openapi-client@^0.4.7":
-  version "0.4.6"
-  resolved "http://registry.m.jd.com/@alicloud/openapi-client/download/@alicloud/openapi-client-0.4.6.tgz#6e354cf94cddb56322f97569714a31fbbb12cb34"
-  integrity sha1-bjVM+UzdtWMi+XVpcUox+7sSyzQ=
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/@alicloud/openapi-client/-/openapi-client-0.4.7.tgz#4779e0b8b5b05431f9e59e514dee0bc451de9dfa"
+  integrity sha512-PR6ufA6hFTpB4gEpsbZpT1nSnsuOTlk9WYtAzJdMBO89ZDGc2qaJ1aCECVfeSkCVnVfTgShfYS6hmz/FjfG+5w==
   dependencies:
     "@alicloud/credentials" "^2"
     "@alicloud/gateway-spi" "^0.0.8"
-    "@alicloud/openapi-util" "^0.3.1"
+    "@alicloud/openapi-util" "^0.3.2"
     "@alicloud/tea-typescript" "^1.7.1"
-    "@alicloud/tea-util" "^1.4.5"
+    "@alicloud/tea-util" "^1.4.7"
     "@alicloud/tea-xml" "0.0.2"
 
-"@alicloud/openapi-util@^0.3.1", "@alicloud/openapi-util@^0.3.2":
-  version "0.3.1"
-  resolved "http://registry.m.jd.com/@alicloud/openapi-util/download/@alicloud/openapi-util-0.3.1.tgz#104f79d91e13a347115c8a416cc2c8f56580af5d"
-  integrity sha1-EE952R4To0cRXIpBbMLI9WWAr10=
+"@alicloud/openapi-util@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@alicloud/openapi-util/-/openapi-util-0.3.2.tgz#d245e7e466d9fdf6945551c5b7c39c17a6596f1c"
+  integrity sha512-EC2JvxdcOgMlBAEG0+joOh2IB1um8CPz9EdYuRfTfd1uP8Yc9D8QRUWVGjP6scnj6fWSOaHFlit9H6PrJSyFow==
   dependencies:
     "@alicloud/tea-typescript" "^1.7.1"
     "@alicloud/tea-util" "^1.3.0"
@@ -74,7 +74,7 @@
     "@types/node" "^12.0.2"
     httpx "^2.2.6"
 
-"@alicloud/tea-util@^1.3.0", "@alicloud/tea-util@^1.4.5", "@alicloud/tea-util@^1.4.7":
+"@alicloud/tea-util@^1.3.0", "@alicloud/tea-util@^1.4.7":
   version "1.4.7"
   resolved "http://registry.m.jd.com/@alicloud/tea-util/download/@alicloud/tea-util-1.4.7.tgz#40748613c3751f5373ffa8e5a0e892602ef3f78c"
   integrity sha1-QHSGE8N1H1Nz/6jloOiSYC7z94w=
@@ -1966,22 +1966,22 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@langchain/community@~0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@langchain/community/-/community-0.0.12.tgz#95b5ddfaef47db6a1f665959e417a706cf56057f"
-  integrity sha512-mcm6FxxnLxSx9PiYvehGGwvcHjsVR5WXfYOwymojf/6d0apyewjOLzKsR3xx0HJVtCs8pff7NZSdDoE+jj8OcA==
+"@langchain/community@~0.0.15":
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/@langchain/community/-/community-0.0.17.tgz#a66c45bdd9e7699e0591720a62d4caaf559f4834"
+  integrity sha512-BI7WJv3rtIbmKrvUNeTaxGGrz8jnu4boLnpl+4cH3WE2lrKTdzuvp6Ot4dACowWInvNSfXcdMzG3BrtTMSaDcQ==
   dependencies:
-    "@langchain/core" "~0.1.5"
-    "@langchain/openai" "~0.0.9"
+    "@langchain/core" "~0.1.9"
+    "@langchain/openai" "~0.0.10"
     flat "^5.0.2"
     langsmith "~0.0.48"
     uuid "^9.0.0"
     zod "^3.22.3"
 
-"@langchain/core@~0.1.5":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@langchain/core/-/core-0.1.6.tgz#4b1dfc361379d6bd45c6652418a05f051488e6d9"
-  integrity sha512-mBXsHHAWgDYJPzPNwOLWXJob3DAlO1tXBybu9cJ+zcVzixiSh/oxQ5eonTK6nlFwO6kGpaIcCD9l9+yq/WCMBg==
+"@langchain/core@~0.1.12", "@langchain/core@~0.1.9":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@langchain/core/-/core-0.1.12.tgz#fb126ae3604d9ba7875ce142cbc610859d88e7ce"
+  integrity sha512-lBfPEjcizJzkZjVTNJp0j+a85BFaXEjzyiUlsh7GwZRERwkrMEV2vtCSRrujbsnZcHzxN67K2bL02KHNLgWkOg==
   dependencies:
     ansi-styles "^5.0.0"
     camelcase "6"
@@ -1994,14 +1994,14 @@
     uuid "^9.0.0"
     zod "^3.22.3"
 
-"@langchain/openai@~0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@langchain/openai/-/openai-0.0.9.tgz#e84b7db0554de75fdd4a8fe12914fdc2b2d2d1f6"
-  integrity sha512-Py7rJijOjNtb9pj5He+E9uAj9d8PCX+8Ix4LvY7cUTMCDlfkhngw2DhJ8wlk23u1IvunakdnnN74pfbO2JJBrw==
+"@langchain/openai@~0.0.10":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@langchain/openai/-/openai-0.0.11.tgz#fa7fa81e55e2535480b09487ba0602d92c4352dd"
+  integrity sha512-km0N+b1bcbtHVDmTEGs7LJFsCrjAcOMnkYlBQrhuIcyhJ052iF4zPpfptScQcZ25dW1yJJI8DS6dVVeM76l52w==
   dependencies:
-    "@langchain/core" "~0.1.5"
+    "@langchain/core" "~0.1.9"
     js-tiktoken "^1.0.7"
-    openai "^4.19.0"
+    openai "^4.24.2"
     zod "^3.22.3"
     zod-to-json-schema "3.20.3"
 
@@ -6138,15 +6138,15 @@ ko-sleep@^1.0.3:
   dependencies:
     ms "*"
 
-langchain@^0.0.213:
-  version "0.0.213"
-  resolved "https://registry.yarnpkg.com/langchain/-/langchain-0.0.213.tgz#52fd367d5f1a100a1cdb775ffbb98eaa5793307b"
-  integrity sha512-nQDOJXvtIAIuUzamCiF1AWyi2GH9FSDPR+3XulJUEpdU60aSFPZ9GBiWdu+dVHXeAmm8C0iCVi0+3GWLJrUoXA==
+langchain@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/langchain/-/langchain-0.1.2.tgz#28d19108a9d7a8b90681cc49a88ac4a333a57832"
+  integrity sha512-sJbVvIabjmsKDsIdfSiojHOg1EXbVsuVH6Y12rproGwYNRdQZ5zhikW+RttuRSmmEfCVfaGV5++nzYes9/jVAg==
   dependencies:
     "@anthropic-ai/sdk" "^0.9.1"
-    "@langchain/community" "~0.0.12"
-    "@langchain/core" "~0.1.5"
-    "@langchain/openai" "~0.0.9"
+    "@langchain/community" "~0.0.15"
+    "@langchain/core" "~0.1.12"
+    "@langchain/openai" "~0.0.10"
     binary-extensions "^2.2.0"
     expr-eval "^2.0.2"
     js-tiktoken "^1.0.7"
@@ -7189,10 +7189,10 @@ open@^8.4.0:
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
 
-openai@^4.19.0:
-  version "4.24.1"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-4.24.1.tgz#3759001eca835228289fcf18c1bd8d35dae538ba"
-  integrity sha512-ezm/O3eiZMnyBqirUnWm9N6INJU1WhNtz+nK/Zj/2oyKvRz9pgpViDxa5wYOtyGYXPn1sIKBV0I/S4BDhtydqw==
+openai@^4.24.2:
+  version "4.24.7"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.24.7.tgz#65b206bcf15c11202f758b5e1e945ffa13fd6b7f"
+  integrity sha512-JUesECWPtsDHO0TlZGb6q73hnAmXUdzj9NrwgZeL4lqlRt/kR1sWrXoy8LocxN/6uOtitywvcJqe0O1PLkG45g==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
@@ -9243,15 +9243,10 @@ yaml@^1.10.0:
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
-yaml@^2.2.1:
+yaml@^2.2.1, yaml@^2.2.2:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.3.4.tgz#53fc1d514be80aabf386dc6001eb29bf3b7523b2"
   integrity sha512-8aAvwVUSHpfEqTQ4w/KMlf3HcRdt50E5ODIQJBw1fQ5RL34xabzxtUlzTXVqc4rkZsPbvrXKWnABCD7kWSmocA==
-
-yaml@^2.2.2:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.3.1.tgz#02fe0975d23cd441242aa7204e09fc28ac2ac33b"
-  integrity sha512-2eHWfjaoXgTBC2jNM1LRef62VQa0umtvRiDSk6HSzW7RvS5YtkabJrwYLLEKWBc8a5U2PTSCs+dJjUTJdlHsWQ==
 
 yocto-queue@^0.1.0:
   version "0.1.0"
