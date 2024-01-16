@@ -29,6 +29,7 @@ import { AuthPage } from "./auth";
 import { getClientConfig } from "../config/client";
 import { ClientApi } from "../client/api";
 import { useAccessStore } from "../store";
+import { Modal } from "antd";
 
 export function Loading(props: { noLogo?: boolean }) {
   return (
@@ -193,6 +194,7 @@ export function useLoadData() {
 }
 
 export function Home() {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
   useLoadData();
   useHtmlLang();
 
@@ -207,6 +209,22 @@ export function Home() {
 
   return (
     <ErrorBoundary>
+      <Modal
+        width="80%"
+        footer={null}
+        open={isModalOpen}
+        title="Demo Video"
+        onCancel={() => setIsModalOpen(false)}
+      >
+        <video
+          autoPlay={true}
+          controls={true}
+          style={{
+            width: "100%",
+          }}
+          src="https://automl-yxc.oss-cn-hangzhou.aliyuncs.com/%E6%BC%94%E7%A4%BA.mp4"
+        ></video>
+      </Modal>
       <Router>
         <Screen />
       </Router>

@@ -1,1 +1,1 @@
-[{"name":"model1","description":"预测钢的延伸率","features":["热压温度（℃）","热压压力（MPa）","固溶温度（℃）","固溶时间（min）","时效温度（℃）","时效时间（h）"],"target":"延伸率（%）","pipeline_id":"pipeline_1705251019.joblib"}]
+[{"name":"steelmodel","description":"预测钢的延伸率","features":["热压温度（℃）","热压压力（MPa）","固溶温度（℃）","固溶时间（min）","时效温度（℃）","时效时间（h）"],"target":"延伸率（%）","pipeline_id":"pipeline_1705400482.joblib"}]

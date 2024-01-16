@@ -16,7 +16,6 @@ async function handle(req: NextRequest) {
   const reqBody: Model = await req.json();
   modelList.push(reqBody);
   fs.writeFile("data/models.json", JSON.stringify(modelList), () => {});
-  console.log("🚀🚀", modelList);
 
   return NextResponse.json({
     msg: "added",

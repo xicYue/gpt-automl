@@ -22,7 +22,7 @@ const DEFAULT_ACCESS_STATE = {
 
   // openai
   openaiUrl: DEFAULT_OPENAI_URL,
-  openaiApiKey: "",
+  openaiApiKey: "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",
 
   // azure
   azureUrl: "",

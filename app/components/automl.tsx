@@ -15,8 +15,11 @@ import { InboxOutlined } from "@ant-design/icons";
 import { CheckboxValueType } from "antd/es/checkbox/Group";
 import { ossUpload } from "../client/platforms/oss";
 import { ServerlessClient } from "../client/platforms/automl";
+import { useChatStore } from "../store";
 
 export function AutoML() {
+  const chatStore = useChatStore();
+
   const [messageApi, contextHolder] = message.useMessage();
 
   const [isModeling, setIsModeling] = useState<boolean>(false);
@@ -136,6 +139,12 @@ export function AutoML() {
                   features: selectedFeature as string[],
                   target: selectedTarget as string,
                   pipeline_id: modelGraphHtml["pipeline_id"],
+                });
+                chatStore.updateCurrentSession((session) => {
+                  const messages = session.messages.concat();
+                  messages[messages.length - 1].content =
+                    "自动机器学习建模已完成";
+                  session.messages = messages;
                 });
                 setIsDeployed(true);
               }}

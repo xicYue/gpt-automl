@@ -306,6 +306,7 @@ export class AgentApi {
           );
         });
       }
+      console.log("🚀 ", tools);
 
       const autoMlTool: langchainTools.Tool = new AutoML();
       tools.push(autoMlTool);
