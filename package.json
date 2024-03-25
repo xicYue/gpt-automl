@@ -27,7 +27,7 @@
     "@vercel/speed-insights": "^1.0.2",
     "ali-oss": "^6.17.1",
     "antd": "^5.12.8",
-    "axios": "^1.4.0",
+    "axios": "^1.6.8",
     "cheerio": "^1.0.0-rc.12",
     "duck-duck-scrape": "^2.2.4",
     "emoji-picker-react": "^4.5.15",
